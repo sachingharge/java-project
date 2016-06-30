@@ -1,0 +1,10 @@
+- name: ci
+  service: gradle
+  command: bash build-app.sh
+
+- service: app
+  type: push
+  image_name: quay.io/campanja/codeship-test
+  registry: quay.io
+  encrypted_dockercfg_path: dockercfg.encrypted
+  tag: master

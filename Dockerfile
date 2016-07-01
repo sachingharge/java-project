@@ -2,7 +2,7 @@
 FROM java:openjdk-8-alpine
 
 # Copy JAR file
-COPY /data/*.jar /opt/gs-spring-boot.jar
+COPY *.jar /opt/gs-spring-boot.jar
 
 # Expose port
 EXPOSE 8080

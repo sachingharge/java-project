@@ -13,4 +13,4 @@ COPY \
   ./
 
 # Run build
-RUN ./gradlew clean assemble && cp build/libs/hi.jar /data
+RUN ./gradlew clean assemble && cp build/libs/*.jar /data

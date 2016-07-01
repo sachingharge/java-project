@@ -2,7 +2,7 @@ gradle:
   build:
     dockerfile_path: gradle/Dockerfile
   volumes:
-    - .:/data
+    - ./tmp/:/data
 
 app:
   build:

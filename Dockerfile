@@ -1,6 +1,8 @@
 # Use OpenJDK image
 FROM java:openjdk-8-alpine
 
+RUN mkdir /opt
+
 # Copy JAR file
 COPY /data/*.jar /opt/gs-spring-boot.jar
 

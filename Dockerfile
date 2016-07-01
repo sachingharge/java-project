@@ -1,10 +1,8 @@
-WORKDIR /data
-
 # Use OpenJDK image
 FROM java:openjdk-8-alpine
 
 # Copy JAR file
-COPY *.jar /opt/gs-spring-boot.jar
+COPY /data/*.jar /opt/gs-spring-boot.jar
 
 # Expose port
 EXPOSE 8080

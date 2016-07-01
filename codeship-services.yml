@@ -8,5 +8,5 @@ app:
   build:
     image: quay.io/campanja/codeship-test
     dockerfile_path: Dockerfile
-    volumes:
-      - ./app:/data
+    volumes_from:
+      - gradle

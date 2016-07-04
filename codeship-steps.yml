@@ -1,6 +1,6 @@
 - name: ci
   service: gradle
-  command: bash build-app.sh
+  command: "bash assemble.sh"
 
 - service: app
   type: push

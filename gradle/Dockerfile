@@ -1,16 +1,14 @@
-# Starting from the Openjdk-8 container
+# Openjdk-8 base image
 FROM java:openjdk-8-jdk
 
-# Set the WORKDIR. All following commands will be run in this directory.
-WORKDIR /app
+# Set working directory
+WORKDIR /opt
 
-# Copying all gradle files necessary to install gradle with gradlew
+# Copy all gradle files necessary to build application
 COPY src src
 COPY gradle gradle
 COPY \
   build.gradle \
   gradlew \
+  assemble.sh \
   ./
-
-# Run build
-RUN ./gradlew clean assemble && cp build/libs/*.jar /data

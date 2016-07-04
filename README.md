@@ -1,2 +1,2 @@
 # java-project
-First JAVA Project with spring boot
+JAVA Project with spring boot for testing

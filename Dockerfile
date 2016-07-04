@@ -1,11 +1,14 @@
 # Use OpenJDK image
 FROM java:openjdk-8-alpine
 
-# Copy JAR file
-COPY /data/*.jar /opt/gs-spring-boot.jar
+# Add JAR file
+ADD tmp/gs-spring-boot-*.jar /opt/
 
 # Expose port
 EXPOSE 8080
 
+# Copy Entrypoint script
+COPY app-entrypoint.sh /opt/app-entrypoint.sh
+
 # Run appplication
-CMD ["java","-jar","/opt/gs-spring-boot.jar"]
+ENTRYPOINT ["/opt/app-entrypoint.sh"]

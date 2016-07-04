@@ -1,12 +1,12 @@
 gradle:
   build:
     dockerfile_path: gradle/Dockerfile
-    volumes:
-      - ./app:/data
+  volumes:
+    - ./tmp/:/data
 
 app:
   build:
     image: quay.io/campanja/codeship-test
     dockerfile_path: Dockerfile
-    volumes_from:
-      - gradle
+  volumes_from:
+    - gradle

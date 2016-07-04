@@ -2,5 +2,4 @@
 build
 dockercfg
 codeship.aes
-test
 tmp
